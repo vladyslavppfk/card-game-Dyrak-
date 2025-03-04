@@ -1,1 +1,1 @@
-# card-game-Dyrak-
+# Гра "Дурак"
