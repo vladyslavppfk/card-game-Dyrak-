@@ -1,0 +1,86 @@
+  Dyrakgame.GameWindow.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Dyrakgame, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Dyrakgame.SettingsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetInitialFullscreenState(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+Class Dyrakgame.Gameform: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean FullscreenModeStatic : Public, Static
+  Properties:
+    Boolean FullscreenMode 'get set' : 
+  Methods:
+    get_FullscreenMode(): PrivateScope, Public, HideBySig, SpecialName
+    set_FullscreenMode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    ApplyFullscreen(): PrivateScope, Public, HideBySig
+    InitializeComponent(): PrivateScope, Public, HideBySig
+    buttonstart_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    GameWindowClosed(Object, FormClosedEventArgs): PrivateScope, Public, HideBySig
+    buttonexit_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+    buttonsettings_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+Class Dyrakgame.EndGameForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Dyrakgame.Card: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Dyrakgame.Suit, Dyrakgame.Rank, System.Drawing.Image): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Point originalPosition : Public
+    Dyrakgame.Suit suit : Public
+    Dyrakgame.Rank rank : Public
+    System.Windows.Forms.PictureBox pictureBox : Public
+Class Dyrakgame.Deck: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Shuffle(): PrivateScope, Public, HideBySig
+    DrawCard(): PrivateScope, Public, HideBySig
+    RemainingCards(): PrivateScope, Public, HideBySig
+Class Dyrakgame.AnimatedCard: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Dyrakgame.Card, System.Drawing.Point, System.Drawing.Point): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Dyrakgame.Card card : Public
+    System.Drawing.Point startLocation : Public
+    System.Drawing.Point targetPosition : Public
+    System.Windows.Forms.Timer timer : Public
+  Methods:
+    StartAnimation(): PrivateScope, Public, HideBySig
+Class Dyrakgame.GameWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct Dyrakgame.Suit: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Dyrakgame.Suit Hearts = 0 : Public, Static, Literal, HasDefault
+    Dyrakgame.Suit Diamonds = 1 : Public, Static, Literal, HasDefault
+    Dyrakgame.Suit Clubs = 2 : Public, Static, Literal, HasDefault
+    Dyrakgame.Suit Spades = 3 : Public, Static, Literal, HasDefault
+Struct Dyrakgame.Rank: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    Dyrakgame.Rank Six = 6 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Seven = 7 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Eight = 8 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Nine = 9 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Ten = 10 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Jack = 11 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Queen = 12 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank King = 13 : Public, Static, Literal, HasDefault
+    Dyrakgame.Rank Ace = 14 : Public, Static, Literal, HasDefault
